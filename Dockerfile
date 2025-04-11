@@ -4,7 +4,7 @@ ARG PLATFORM
 FROM --platform=$PLATFORM $OS_BASE_IMAGE
 
 RUN pacman -Sy --noconfirm
-RUN pacman --noconfirm -S curl tar
+RUN pacman --noconfirm -S curl tar zip git docker base-devel cmake wget python
 
 COPY entrypoint.sh /.
 RUN chmod +x /entrypoint.sh
